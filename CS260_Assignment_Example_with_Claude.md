@@ -1,5 +1,15 @@
 # CS 260 Assignment Example: Restaurant Review App with Claude Integration
 
+> [!NOTE]
+>
+> `LEE` This seems great. We should try it ourselves first. It will be a significant mental shift for our students to move to this model. They love detailed rubrics. Possible reactions will likely be:
+>
+> - The AI grader isn't working right
+> - I don't know what the AI grader wants
+> - What am I suppose to do?
+>
+> Also, what about UI testing? It looks like everything is API testing. It is a web app and so you really need to test the frontend. Google's Antigravity has really slick testing via the browser.
+
 **Course:** CS 260 - Web Programming
 **Assignment:** Build a Full-Stack Restaurant Review Application
 **Duration:** 3 weeks
@@ -8,9 +18,11 @@
 ## Assignment Specification
 
 ### Overview
+
 Build a full-stack web application that allows users to browse restaurants, submit reviews, and view ratings.
 
 ### Required Features
+
 1. **Restaurant Listing:** Display all restaurants with name, cuisine type, average rating
 2. **Restaurant Detail:** Show individual restaurant with all reviews
 3. **Add Review:** Form to submit review (rating 1-5 stars, text review, reviewer name)
@@ -18,6 +30,7 @@ Build a full-stack web application that allows users to browse restaurants, subm
 5. **Responsive Design:** Works on mobile and desktop
 
 ### Technical Requirements
+
 - **Frontend:** HTML, CSS, JavaScript (vanilla or React - student's choice)
 - **Backend:** Node.js + Express
 - **Database:** MongoDB or PostgreSQL
@@ -26,13 +39,16 @@ Build a full-stack web application that allows users to browse restaurants, subm
 - **Testing:** At least 5 meaningful tests
 
 ### Deliverables
+
 1. **Design Document** (Due Week 1):
+
    - Architecture diagram
    - API endpoint design
    - Database schema
    - Technology choices with justification
 
 2. **Implementation** (Due Week 3):
+
    - Working application
    - Tests
    - README with setup instructions
@@ -43,6 +59,7 @@ Build a full-stack web application that allows users to browse restaurants, subm
    - Reflect on how Claude helped and limitations you found
 
 ### Grading Breakdown (100 points)
+
 - **Design Document (20 pts):** Claude API-graded for justification quality
 - **Functional Correctness (30 pts):** Autograder tests all required features
 - **API Design Quality (15 pts):** Autograder checks REST conventions, status codes
@@ -55,19 +72,23 @@ Build a full-stack web application that allows users to browse restaurants, subm
 ### Student-Claude Interaction: Architecture Discussion
 
 **Student:**
+
 > I need to design a restaurant review app for my CS 260 assignment. The requirements are: display restaurants, show reviews, let users add reviews, filter by cuisine. I need to choose between vanilla JavaScript and React for the frontend, and decide on database schema. Can you help me think through the architecture?
 
 **Claude:**
+
 > I'd be happy to help you think through the architecture for your restaurant review app. Let's break this down into key decisions:
 >
 > **Frontend Framework Decision:**
 >
 > **Vanilla JavaScript:**
+>
 > - Pros: Better understanding of DOM manipulation, lighter weight, no build tools needed
 > - Cons: More boilerplate for state management, manual DOM updates can get complex
 > - Best if: You want to deeply understand how frameworks work under the hood
 >
 > **React:**
+>
 > - Pros: Component reusability, easier state management, declarative UI updates
 > - Cons: Build setup required, more abstraction from fundamentals
 > - Best if: You want to focus more on application logic than DOM manipulation
@@ -98,33 +119,39 @@ Build a full-stack web application that allows users to browse restaurants, subm
 > **API Endpoints:**
 >
 > Following REST conventions:
+>
 > - GET /api/restaurants - List all restaurants
 > - GET /api/restaurants/:id - Get single restaurant with reviews
 > - POST /api/restaurants/:id/reviews - Add review to restaurant
 > - GET /api/restaurants?cuisine=Italian - Filter by cuisine
 >
 > **Questions for you to consider:**
+>
 > - Do you want to implement user authentication, or allow anonymous reviews?
 > - Should reviews be editable/deletable?
 > - Do you want real-time updates when reviews are added?
 > - What's your comfort level with React vs vanilla JS?
 
 **Student:**
+
 > I'm comfortable with React and want to focus on the application logic rather than DOM manipulation. I don't think I need authentication for this assignment - anonymous reviews are fine. Reviews don't need to be editable. No real-time updates needed.
 >
 > For the database, should I use MongoDB or PostgreSQL? And do I need any indexes for the filter/search functionality?
 
 **Claude:**
+
 > Great choices - React will let you focus on the application architecture.
 >
 > **MongoDB vs PostgreSQL for this project:**
 >
 > **MongoDB:**
+>
 > - Pros: Easier to get started, flexible schema, can embed reviews in restaurant documents
 > - Cons: Less strict about data integrity, joins are more complex
 > - Good fit: Your data model is relatively simple, no complex relationships
 >
 > **PostgreSQL:**
+>
 > - Pros: Strong data integrity with foreign keys, excellent for relational data (restaurants ↔ reviews)
 > - Cons: Requires more schema design upfront, slightly more complex setup
 > - Good fit: You have a clear relational model, want to ensure review consistency
@@ -132,6 +159,7 @@ Build a full-stack web application that allows users to browse restaurants, subm
 > For this assignment, **MongoDB might be simpler** since your data model is straightforward. You could structure it two ways:
 >
 > **Option 1: Embedded reviews (simpler for this scale)**
+>
 > ```javascript
 > {
 >   _id: ObjectId,
@@ -145,6 +173,7 @@ Build a full-stack web application that allows users to browse restaurants, subm
 > ```
 >
 > **Option 2: Separate collections (more scalable)**
+>
 > ```javascript
 > // Restaurants collection
 > {_id: ObjectId, name: "Pizza Palace", cuisine: "Italian"}
@@ -154,12 +183,14 @@ Build a full-stack web application that allows users to browse restaurants, subm
 > ```
 >
 > **Recommendation:** Use **separate collections** (Option 2). Here's why:
+>
 > - More scalable (if a restaurant has 1000 reviews, embedded would make the document huge)
 > - Easier to query "all reviews by user" later if needed
 > - Better practice for learning database design
 >
 > **Indexes for performance:**
 > Yes, you should add indexes:
+>
 > - `cuisine` field in Restaurants collection (for filtering)
 > - `name` field in Restaurants collection (for search)
 > - `restaurant_id` in Reviews collection (for lookups)
@@ -167,6 +198,7 @@ Build a full-stack web application that allows users to browse restaurants, subm
 > **Does this make sense for your design doc? What questions do you have?**
 
 **Student:**
+
 > That makes sense! So I'll go with React frontend, Express backend, MongoDB with separate collections. Let me draft my API endpoints more specifically:
 >
 > - GET /api/restaurants - returns all restaurants with average rating calculated
@@ -179,12 +211,14 @@ Build a full-stack web application that allows users to browse restaurants, subm
 > Does this API design look good? Should I calculate average rating in the backend or frontend?
 
 **Claude:**
+
 > Your API design is solid! A few suggestions:
 >
 > **API Refinements:**
 >
 > 1. **Consolidate GET endpoints:**
 >    Instead of separate endpoints for cuisine and search, use query parameters on the main endpoint:
+>
 >    ```
 >    GET /api/restaurants           # all restaurants
 >    GET /api/restaurants?cuisine=Italian
@@ -194,6 +228,7 @@ Build a full-stack web application that allows users to browse restaurants, subm
 >
 > 2. **Consider nesting:**
 >    Your current design has:
+>
 >    - GET /api/restaurants/:id - restaurant data
 >    - GET /api/restaurants/:id/reviews - reviews for restaurant
 >
@@ -212,23 +247,23 @@ Build a full-stack web application that allows users to browse restaurants, subm
 > **Average Rating Calculation:**
 >
 > **Calculate on backend** (recommended):
+>
 > - When a new review is added, recalculate and store average rating in restaurant document
 > - Or calculate on-the-fly using MongoDB aggregation:
 >   ```javascript
->   db.reviews.aggregate([
->     {$match: {restaurant_id: id}},
->     {$group: {_id: null, avgRating: {$avg: "$rating"}}}
->   ])
+>   db.reviews.aggregate([{ $match: { restaurant_id: id } }, { $group: { _id: null, avgRating: { $avg: '$rating' } } }]);
 >   ```
 > - Pro: API returns ready-to-use data, consistent calculation
 > - Con: Slightly more backend logic
 >
 > **Calculate on frontend:**
+>
 > - Fetch all reviews, calculate average in JavaScript
 > - Pro: Simpler backend
 > - Con: Extra data transferred, calculation logic in multiple places
 >
 > **Best practice:** Calculate on backend. Your API should return:
+>
 > ```json
 > {
 >   "id": "123",
@@ -245,10 +280,11 @@ Build a full-stack web application that allows users to browse restaurants, subm
 
 ### Student's Design Document (Submitted)
 
-```markdown
+````markdown
 # Restaurant Review App - Design Document
 
 ## Architecture Overview
+
 - **Frontend:** React application with component-based UI
 - **Backend:** Node.js + Express REST API
 - **Database:** MongoDB with separate collections for restaurants and reviews
@@ -256,13 +292,16 @@ Build a full-stack web application that allows users to browse restaurants, subm
 ## Technology Justification
 
 ### Why React?
+
 I chose React over vanilla JavaScript because:
+
 - Component reusability will make it easier to build restaurant cards and review lists
 - State management is simpler for handling filter/search interactions
 - Declarative UI updates reduce DOM manipulation complexity
 - Industry-relevant skill
 
 ### Why MongoDB?
+
 - Straightforward setup for this project scale
 - Flexible schema if requirements change
 - Good practice with NoSQL databases
@@ -271,6 +310,7 @@ I chose React over vanilla JavaScript because:
 ## Database Schema
 
 ### Restaurants Collection
+
 ```javascript
 {
   _id: ObjectId,
@@ -282,12 +322,15 @@ I chose React over vanilla JavaScript because:
   reviewCount: Number
 }
 ```
+````
 
 **Indexes:**
+
 - `cuisine` (for filtering)
 - `name` (for search)
 
 ### Reviews Collection
+
 ```javascript
 {
   _id: ObjectId,
@@ -300,19 +343,22 @@ I chose React over vanilla JavaScript because:
 ```
 
 **Indexes:**
+
 - `restaurant_id` (for querying reviews by restaurant)
 
 ## API Design
 
-| Method | Endpoint | Description | Status Codes |
-|--------|----------|-------------|--------------|
-| GET | /api/restaurants | Get all restaurants, with optional ?cuisine= or ?search= filters | 200 |
-| GET | /api/restaurants/:id | Get single restaurant with details | 200, 404 |
-| GET | /api/restaurants/:id/reviews | Get all reviews for a restaurant | 200, 404 |
-| POST | /api/restaurants/:id/reviews | Add a review to a restaurant | 201, 400, 404 |
+| Method | Endpoint                     | Description                                                      | Status Codes  |
+| ------ | ---------------------------- | ---------------------------------------------------------------- | ------------- |
+| GET    | /api/restaurants             | Get all restaurants, with optional ?cuisine= or ?search= filters | 200           |
+| GET    | /api/restaurants/:id         | Get single restaurant with details                               | 200, 404      |
+| GET    | /api/restaurants/:id/reviews | Get all reviews for a restaurant                                 | 200, 404      |
+| POST   | /api/restaurants/:id/reviews | Add a review to a restaurant                                     | 201, 400, 404 |
 
 ### Design Decision: Average Rating Calculation
+
 I will calculate average rating on the backend when reviews are added, and store it in the restaurant document. This is better than frontend calculation because:
+
 - API returns consistent data to all clients
 - Reduces data transfer (don't need to send all reviews just to calculate average)
 - Single source of truth for rating calculation
@@ -331,18 +377,21 @@ App
 ```
 
 ## Security Considerations
+
 - Input validation on review submissions (validate rating is 1-5, text is not empty)
 - Sanitize user input to prevent XSS attacks
 - Use parameterized queries to prevent NoSQL injection
 - Rate limiting on review submission to prevent spam
 
 ## Testing Plan
+
 - Test GET /api/restaurants returns all restaurants
 - Test filtering by cuisine works correctly
 - Test search by name works correctly
 - Test POST review creates review and updates restaurant averageRating
 - Test invalid review data returns 400 error
-```
+
+````
 
 ### Claude API Autograding of Design Document
 
@@ -400,30 +449,30 @@ Return JSON:
     )
 
     return json.loads(response.content[0].text)
-```
+````
 
 **Claude's Assessment:**
 
 ```json
 {
-    "technology_justification": {
-        "score": 5,
-        "feedback": "Excellent justification. Student explains React choice with specific reasons (component reusability, state management, declarative UI) rather than generic statements. MongoDB justification is solid with awareness of tradeoffs (flexible schema, separate vs embedded collections). Shows consideration of scale and future changes."
-    },
-    "database_design": {
-        "score": 5,
-        "feedback": "Strong database design. Appropriate schema with clear separation of concerns. Importantly, student includes indexes for cuisine, name, and restaurant_id - showing performance awareness. Averageing and reviewCount in restaurant document is a good denormalization decision. Clear foreign key relationship via restaurant_id."
-    },
-    "api_design": {
-        "score": 4,
-        "feedback": "Good RESTful API design with proper endpoints and HTTP methods. Correctly uses query parameters for filtering/search. Includes appropriate status codes (200, 201, 400, 404). Minor issue: could mention GET /api/restaurants/:id could optionally include reviews to reduce API calls, but current design is acceptable. Good documentation in table format."
-    },
-    "depth_of_thinking": {
-        "score": 5,
-        "feedback": "Demonstrates genuine understanding of design tradeoffs. The average rating calculation section shows excellent critical thinking - student compares backend vs frontend calculation with specific pros/cons and makes a justified choice. Security considerations section shows awareness of real-world concerns (XSS, NoSQL injection, rate limiting). Component architecture is clearly thought through. This goes beyond surface-level description."
-    },
-    "total_score": 19,
-    "overall_feedback": "Outstanding design document. You demonstrate clear understanding of architectural decisions and can justify your choices with technical reasoning. Your database design is solid with appropriate indexes, and your API follows REST conventions. The average rating calculation discussion particularly shows strong critical thinking. One minor suggestion: consider whether GET /api/restaurants/:id should include reviews to reduce client API calls, or keep them separate for faster list view loading - document your reasoning. Great work!"
+  "technology_justification": {
+    "score": 5,
+    "feedback": "Excellent justification. Student explains React choice with specific reasons (component reusability, state management, declarative UI) rather than generic statements. MongoDB justification is solid with awareness of tradeoffs (flexible schema, separate vs embedded collections). Shows consideration of scale and future changes."
+  },
+  "database_design": {
+    "score": 5,
+    "feedback": "Strong database design. Appropriate schema with clear separation of concerns. Importantly, student includes indexes for cuisine, name, and restaurant_id - showing performance awareness. Averageing and reviewCount in restaurant document is a good denormalization decision. Clear foreign key relationship via restaurant_id."
+  },
+  "api_design": {
+    "score": 4,
+    "feedback": "Good RESTful API design with proper endpoints and HTTP methods. Correctly uses query parameters for filtering/search. Includes appropriate status codes (200, 201, 400, 404). Minor issue: could mention GET /api/restaurants/:id could optionally include reviews to reduce API calls, but current design is acceptable. Good documentation in table format."
+  },
+  "depth_of_thinking": {
+    "score": 5,
+    "feedback": "Demonstrates genuine understanding of design tradeoffs. The average rating calculation section shows excellent critical thinking - student compares backend vs frontend calculation with specific pros/cons and makes a justified choice. Security considerations section shows awareness of real-world concerns (XSS, NoSQL injection, rate limiting). Component architecture is clearly thought through. This goes beyond surface-level description."
+  },
+  "total_score": 19,
+  "overall_feedback": "Outstanding design document. You demonstrate clear understanding of architectural decisions and can justify your choices with technical reasoning. Your database design is solid with appropriate indexes, and your API follows REST conventions. The average rating calculation discussion particularly shows strong critical thinking. One minor suggestion: consider whether GET /api/restaurants/:id should include reviews to reduce client API calls, or keep them separate for faster list view loading - document your reasoning. Great work!"
 }
 ```
 
@@ -436,9 +485,11 @@ Return JSON:
 ### Student-Claude Interaction: Implementation Help
 
 **Student:**
+
 > I'm ready to start implementing my restaurant review app. I have my design approved. Can you help me set up the Express server with the REST endpoints I designed?
 
 **Claude:**
+
 > Absolutely! Let's set up your Express server with the endpoints from your design. Here's a structure to get you started:
 >
 > ```javascript
@@ -456,7 +507,7 @@ Return JSON:
 > // MongoDB connection
 > mongoose.connect('mongodb://localhost:27017/restaurant-reviews', {
 >   useNewUrlParser: true,
->   useUnifiedTopology: true
+>   useUnifiedTopology: true,
 > });
 >
 > // Models
@@ -466,7 +517,7 @@ Return JSON:
 >   address: String,
 >   description: String,
 >   averageRating: { type: Number, default: 0 },
->   reviewCount: { type: Number, default: 0 }
+>   reviewCount: { type: Number, default: 0 },
 > });
 >
 > // Add indexes as per your design
@@ -478,7 +529,7 @@ Return JSON:
 >   rating: { type: Number, min: 1, max: 5 },
 >   reviewText: String,
 >   reviewerName: String,
->   createdAt: { type: Date, default: Date.now }
+>   createdAt: { type: Date, default: Date.now },
 > });
 >
 > reviewSchema.index({ restaurant_id: 1 });
@@ -498,7 +549,7 @@ Return JSON:
 >       query.cuisine = cuisine;
 >     }
 >     if (search) {
->       query.name = { $regex: search, $options: 'i' };  // case-insensitive search
+>       query.name = { $regex: search, $options: 'i' }; // case-insensitive search
 >     }
 >
 >     const restaurants = await Restaurant.find(query);
@@ -558,7 +609,7 @@ Return JSON:
 >       restaurant_id: req.params.id,
 >       rating,
 >       reviewText,
->       reviewerName
+>       reviewerName,
 >     });
 >     await review.save();
 >
@@ -583,6 +634,7 @@ Return JSON:
 > ```
 >
 > This implementation:
+>
 > - Sets up all your designed endpoints
 > - Includes input validation (as you noted in your design doc)
 > - Calculates average rating on backend (your design decision)
@@ -591,6 +643,7 @@ Return JSON:
 > - Handles filtering and search via query parameters
 >
 > **Next steps:**
+>
 > 1. Test each endpoint with Postman or curl
 > 2. Add some seed data to test filtering/search
 > 3. Start building your React frontend
@@ -598,20 +651,25 @@ Return JSON:
 > **Questions?**
 
 **Student:**
+
 > This looks great! One question - in the POST /api/restaurants/:id/reviews, you're recalculating the average by fetching all reviews. Is this the most efficient approach, or could I do the math incrementally?
 
 **Claude:**
+
 > Excellent question! You're thinking about performance - that's great. You're right that my current implementation fetches all reviews every time, which could be inefficient if a restaurant has hundreds of reviews.
 >
 > **Current approach (what I showed):**
+>
 > ```javascript
 > const allReviews = await Review.find({ restaurant_id: req.params.id });
 > const avgRating = allReviews.reduce((sum, r) => sum + r.rating, 0) / allReviews.length;
 > ```
+>
 > - Pro: Always accurate, simple logic
 > - Con: O(n) database query every time a review is added
 >
 > **Incremental calculation (more efficient):**
+>
 > ```javascript
 > // Use the existing averageRating and reviewCount to calculate new average
 > const oldAvg = restaurant.averageRating;
@@ -623,16 +681,19 @@ Return JSON:
 > restaurant.reviewCount = newCount;
 > await restaurant.save();
 > ```
+>
 > - Pro: O(1) calculation, no need to fetch all reviews
 > - Con: Prone to rounding errors over time, harder to debug if data gets inconsistent
 >
 > **Recommendation:**
 > For this assignment, **use the incremental approach**. Here's why:
+>
 > - Demonstrates understanding of algorithmic efficiency
 > - Scales better (important if discussing tradeoffs in your reflection)
 > - More professional implementation
 >
 > However, in your reflection document, you should mention:
+>
 > - Why you chose incremental calculation (performance)
 > - The tradeoff (potential precision issues vs. efficiency)
 > - That in a production system you might periodically recalculate all averages to fix any drift
@@ -640,9 +701,11 @@ Return JSON:
 > Does that make sense? Want to see the updated POST endpoint code?
 
 **Student:**
+
 > Yes, that makes sense! I'll use the incremental approach. Can you show me the updated POST endpoint?
 
 **Claude:**
+
 > Sure! Here's the updated POST endpoint with incremental average calculation:
 >
 > ```javascript
@@ -672,7 +735,7 @@ Return JSON:
 >       restaurant_id: req.params.id,
 >       rating,
 >       reviewText,
->       reviewerName
+>       reviewerName,
 >     });
 >     await review.save();
 >
@@ -694,6 +757,7 @@ Return JSON:
 > ```
 >
 > Key changes:
+>
 > - No longer fetching all reviews
 > - Uses math formula: `new_avg = (old_avg * old_count + new_rating) / (old_count + 1)`
 > - Handles case where restaurant has no reviews yet (|| 0)
@@ -997,29 +1061,35 @@ Return JSON:
 ## Design Decisions
 
 ### React vs. Vanilla JavaScript
+
 I chose React because I wanted to focus on application architecture rather than DOM manipulation. The component-based structure made it easy to build reusable RestaurantCard and ReviewCard components. In hindsight, this was the right choice - I was able to build a more sophisticated UI with less code than vanilla JS would have required.
 
 ### Database Schema
+
 I used separate collections for restaurants and reviews rather than embedding reviews in restaurant documents. This decision was based on scalability - if a popular restaurant has thousands of reviews, an embedded approach would make the restaurant document huge and slow to query.
 
 One challenge I encountered: initially I was recalculating average ratings by fetching all reviews every time. Claude suggested an incremental calculation approach, which I implemented. However, I realized this could lead to rounding errors over time. In a production system, I'd add a periodic batch job to recalculate all averages to fix any drift.
 
 ### API Design
+
 I used query parameters (?cuisine=Italian) for filtering instead of separate endpoints. This kept the API clean and allowed combining filters easily.
 
 ## How Claude Helped (and Where It Didn't)
 
 ### Where Claude Was Helpful:
+
 - **Boilerplate code**: Claude generated the initial Express server structure, Mongoose schemas, and route handlers. This saved significant time.
 - **Design discussion**: Talking through architecture decisions with Claude helped me think through tradeoffs (embedded vs. separate collections, frontend vs. backend rating calculation).
 - **Debugging**: When my average rating calculation wasn't updating correctly, Claude helped me identify that I wasn't saving the restaurant model after updating it.
 
 ### Where Claude Was Limited:
+
 - **UI Design**: Claude could generate React components, but couldn't help me decide on the visual design or UX flow. I had to make those decisions myself.
 - **Testing edge cases**: Claude suggested basic tests, but I had to think through edge cases like "what happens if restaurant has zero reviews?" myself.
 - **Understanding my specific data**: When debugging, Claude gave general advice, but I had to actually examine my database and console logs to understand what was wrong.
 
 ### Critical Reflection on AI Usage:
+
 Using Claude was like having an experienced developer to discuss ideas with, but I still had to make all the decisions and understand the code. I couldn't just copy-paste - I had to understand WHY the suggested approaches worked. For example, when Claude suggested the incremental average calculation, I had to work through the math myself to understand it.
 
 The biggest risk I noticed: it's tempting to just accept Claude's suggestions without thinking critically. I had to constantly ask myself "Why this approach?" and "What are the tradeoffs?" to avoid shallow learning.
@@ -1027,12 +1097,15 @@ The biggest risk I noticed: it's tempting to just accept Claude's suggestions wi
 ## Challenges and Solutions
 
 ### Challenge 1: CORS Errors
+
 Initially, my React frontend couldn't communicate with the Express backend due to CORS errors. Claude suggested adding the cors middleware, which fixed it. However, I then researched CORS to understand WHY it was needed (browser security).
 
 ### Challenge 2: Mongoose ObjectId Validation
+
 When testing with invalid restaurant IDs, my server was crashing instead of returning 404. I had to add error handling for Mongoose CastError when an invalid ObjectId format is provided.
 
 ### Challenge 3: Real-Time Average Rating Updates
+
 I wanted the UI to immediately show the new average after adding a review, without refreshing. I had to implement state management in React to update the restaurant detail view after the POST request completed.
 
 ## What I Learned
@@ -1047,20 +1120,20 @@ I wanted the UI to immediately show the new average after adding a review, witho
 
 ```json
 {
-    "design_decisions": {
-        "score": 5,
-        "feedback": "Excellent explanation of design decisions with clear justification. Student explains React choice with specific reasoning, discusses database schema tradeoffs (embedded vs. separate collections with scalability justification), and shows awareness of the average rating calculation tradeoff (incremental efficiency vs. potential drift). The mention of adding a batch job to fix drift shows mature engineering thinking. API design reasoning is clear and practical."
-    },
-    "claude_usage": {
-        "score": 5,
-        "feedback": "Outstanding critical reflection on AI usage. Student clearly articulates where Claude helped (boilerplate, design discussion, debugging) and where it was limited (UI/UX, edge cases, specific data understanding). Most importantly, the 'Critical Reflection' section shows genuine awareness of the risks of over-relying on AI ('tempting to just accept suggestions without thinking critically'). The student demonstrates they actively questioned AI suggestions and verified understanding. This is exactly the kind of thoughtful AI usage we want to see."
-    },
-    "technical_understanding": {
-        "score": 5,
-        "feedback": "Demonstrates deep understanding of the technical concepts. The CORS challenge shows they didn't just apply a fix but researched why it was needed. The Mongoose CastError handling shows attention to error cases. The real-time UI update challenge demonstrates understanding of state management. The discussion of rounding errors in incremental calculation and the batch job solution shows sophisticated thinking about production systems. Reflection matches the code and goes beyond surface-level description to discuss underlying concepts and tradeoffs."
-    },
-    "total_score": 15,
-    "overall_feedback": "Exceptional reflection document. You demonstrate genuine understanding of your design decisions, critical thinking about tradeoffs, and thoughtful use of AI assistance. Your awareness of both the benefits and limitations of Claude shows mature engineering judgment. The specific examples (CORS, ObjectId validation, state management) demonstrate real problem-solving. Your point about AI being 'a tool, not a replacement' and the need to constantly ask 'Why?' is exactly right. This is a model reflection - you clearly learned from this project and can articulate your learning. Excellent work!"
+  "design_decisions": {
+    "score": 5,
+    "feedback": "Excellent explanation of design decisions with clear justification. Student explains React choice with specific reasoning, discusses database schema tradeoffs (embedded vs. separate collections with scalability justification), and shows awareness of the average rating calculation tradeoff (incremental efficiency vs. potential drift). The mention of adding a batch job to fix drift shows mature engineering thinking. API design reasoning is clear and practical."
+  },
+  "claude_usage": {
+    "score": 5,
+    "feedback": "Outstanding critical reflection on AI usage. Student clearly articulates where Claude helped (boilerplate, design discussion, debugging) and where it was limited (UI/UX, edge cases, specific data understanding). Most importantly, the 'Critical Reflection' section shows genuine awareness of the risks of over-relying on AI ('tempting to just accept suggestions without thinking critically'). The student demonstrates they actively questioned AI suggestions and verified understanding. This is exactly the kind of thoughtful AI usage we want to see."
+  },
+  "technical_understanding": {
+    "score": 5,
+    "feedback": "Demonstrates deep understanding of the technical concepts. The CORS challenge shows they didn't just apply a fix but researched why it was needed. The Mongoose CastError handling shows attention to error cases. The real-time UI update challenge demonstrates understanding of state management. The discussion of rounding errors in incremental calculation and the batch job solution shows sophisticated thinking about production systems. Reflection matches the code and goes beyond surface-level description to discuss underlying concepts and tradeoffs."
+  },
+  "total_score": 15,
+  "overall_feedback": "Exceptional reflection document. You demonstrate genuine understanding of your design decisions, critical thinking about tradeoffs, and thoughtful use of AI assistance. Your awareness of both the benefits and limitations of Claude shows mature engineering judgment. The specific examples (CORS, ObjectId validation, state management) demonstrate real problem-solving. Your point about AI being 'a tool, not a replacement' and the need to constantly ask 'Why?' is exactly right. This is a model reflection - you clearly learned from this project and can articulate your learning. Excellent work!"
 }
 ```
 
@@ -1070,31 +1143,34 @@ I wanted the UI to immediately show the new average after adding a review, witho
 
 ## Final Grade Summary
 
-| Component | Points | Student Score |
-|-----------|--------|---------------|
-| Design Document (Claude-graded) | 20 | 19 |
-| Functional Correctness (Autograder) | 30 | 30 |
-| API Design Quality (Autograder) | 15 | 15 |
-| Code Quality (Autograder) | 10 | 10 |
-| Testing (Autograder) | 10 | 8 |
-| Reflection (Claude-graded) | 15 | 15 |
-| **TOTAL** | **100** | **97** |
+| Component                           | Points  | Student Score |
+| ----------------------------------- | ------- | ------------- |
+| Design Document (Claude-graded)     | 20      | 19            |
+| Functional Correctness (Autograder) | 30      | 30            |
+| API Design Quality (Autograder)     | 15      | 15            |
+| Code Quality (Autograder)           | 10      | 10            |
+| Testing (Autograder)                | 10      | 8             |
+| Reflection (Claude-graded)          | 15      | 15            |
+| **TOTAL**                           | **100** | **97**        |
 
 ## Key Takeaways from This Assignment Model
 
 ### For Students:
+
 1. Claude is available to discuss design decisions and help with implementation
 2. Students must explain and justify choices - can't just submit AI-generated code
 3. Multi-dimensional assessment (design + implementation + reflection) prevents shallow learning
 4. Reflection requirement encourages metacognition about AI usage
 
 ### For Faculty:
+
 1. Autograding handles functional testing at scale (1,500 students)
 2. Claude API grades subjective components (design doc, reflection)
 3. Total grading time per student: < 5 minutes for spot-checks
 4. Students receive detailed feedback on all components
 
 ### For the Department:
+
 1. Scalable to large enrollment courses
 2. Tests understanding, not just code generation
 3. Prepares students for AI-augmented professional work

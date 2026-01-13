@@ -9,6 +9,7 @@
 This implementation plan outlines the timeline and key milestones for integrating Claude AI into three BYU Computer Science courses by Fall 2026. The plan emphasizes faculty preparation, autograder enhancement, clear student policies, and measurable outcomes.
 
 **Critical Success Factors:**
+
 1. Faculty buy-in and training completed by August 2026
 2. Autograders enhanced to assess understanding, not just correctness
 3. Clear AI usage policies established and communicated to students
@@ -16,6 +17,10 @@ This implementation plan outlines the timeline and key milestones for integratin
 5. Assessment framework ready to measure learning outcomes
 
 ## Timeline Overview
+
+> [!NOTE]
+>
+> `LEE` Somehow this seems too fast and too slow at the same time. Perhaps too fast for our department to absorb and too slow for what our students need. This feels like a large allocation of resources in order to accomplish all of these goals in the given timeline. Three different instructors, working with IT, allocating budgets, distributing licenses, creating custom autograders, maintaining autograders, enhancing curriculum, training TAs, gaining experience with the tools, and getting faculty acceptance. All over a year period. This feels much larger than a committee assignment. More like the scope of a new course creation. Except we are proposing three course creations.
 
 ```
 Jan-Apr 2026: Planning & Preparation
@@ -29,6 +34,7 @@ Dec 2026:     Assessment & Planning for Expansion
 **Objective:** Establish foundation, secure resources, and align stakeholders
 
 ### January 2026
+
 - **Milestone:** Department approval of recommendation and implementation plan
 - **Action:** Present recommendation to department leadership and faculty
 - **Action:** Identify faculty leads for CS 260, CS 340, CS 329
@@ -36,6 +42,7 @@ Dec 2026:     Assessment & Planning for Expansion
 - **Deliverable:** Approved plan with identified course leads
 
 ### February 2026
+
 - **Milestone:** Licenses and technical infrastructure secured
 - **Action:** Procure Claude Team/Enterprise licenses for students (estimated 200-300 seats)
 - **Action:** Determine access model (department licenses vs. student subscriptions)
@@ -44,6 +51,7 @@ Dec 2026:     Assessment & Planning for Expansion
 - **Deliverable:** Claude access ready for faculty and pilot students
 
 ### March 2026
+
 - **Milestone:** AI Usage Policy Framework approved
 - **Action:** Draft AI usage policy for target courses (3-tier framework: encouraged/allowed/prohibited)
 - **Action:** Work with honor code office on academic integrity guidelines
@@ -52,6 +60,7 @@ Dec 2026:     Assessment & Planning for Expansion
 - **Deliverable:** Approved AI usage policy document for courses
 
 ### April 2026
+
 - **Milestone:** Autograding enhancement plan finalized
 - **Action:** Audit existing autograders for CS 260, CS 340, CS 329
 - **Action:** Identify which assignments need redesign for multi-dimensional assessment
@@ -65,6 +74,7 @@ Dec 2026:     Assessment & Planning for Expansion
 **Objective:** Prepare faculty and courses for successful AI integration
 
 ### May 2026
+
 - **Milestone:** Faculty workshop series begins
 - **Action:** Workshop 1 - "Effective Use of Claude for Teaching" (hands-on with Claude capabilities)
 - **Action:** Workshop 2 - "Designing AI-Era Assignments" (autograding for understanding, constraint-based assessment)
@@ -73,6 +83,7 @@ Dec 2026:     Assessment & Planning for Expansion
 - **Deliverable:** Faculty trained on Claude pedagogy and assessment strategies
 
 ### June 2026
+
 - **Milestone:** Course materials redesigned
 - **Action:** CS 260 instructor redesigns assignments with AI-appropriate usage tiers
 - **Action:** CS 340 instructor updates design projects with explanation requirements
@@ -82,6 +93,7 @@ Dec 2026:     Assessment & Planning for Expansion
 - **Deliverable:** Redesigned syllabi and assignments for all three courses
 
 ### July 2026
+
 - **Milestone:** Autograders enhanced and tested
 - **Action:** Implement multi-dimensional autograding (correctness + design + testing + explanation)
 - **Action:** Integrate constraint-based checks (architecture patterns, performance requirements)
@@ -91,6 +103,7 @@ Dec 2026:     Assessment & Planning for Expansion
 - **Deliverable:** Production-ready enhanced autograders for target courses
 
 ### August 2026 (Pre-Semester)
+
 - **Milestone:** Launch readiness achieved
 - **Action:** Final faculty prep meeting and Q&A
 - **Action:** Distribute student guides on Claude usage and academic integrity
@@ -104,6 +117,7 @@ Dec 2026:     Assessment & Planning for Expansion
 **Objective:** Execute successful launch with continuous support and monitoring
 
 ### August - September 2026
+
 - **Milestone:** Successful course launch and student onboarding
 - **Action:** First-week orientation on AI tools and academic integrity in all three courses
 - **Action:** Students receive access to Claude with clear usage guidelines
@@ -113,6 +127,7 @@ Dec 2026:     Assessment & Planning for Expansion
 - **Deliverable:** Students successfully onboarded to AI-assisted coursework
 
 ### October - November 2026
+
 - **Milestone:** Mid-semester assessment and adjustment
 - **Action:** Review autograder effectiveness (are they assessing understanding?)
 - **Action:** Monitor academic integrity (any concerns or patterns?)
@@ -122,6 +137,7 @@ Dec 2026:     Assessment & Planning for Expansion
 - **Deliverable:** Mid-semester progress report with adjustments made
 
 ### December 2026
+
 - **Milestone:** End-of-semester data collection and analysis
 - **Action:** Collect final student surveys on Claude usage and learning impact
 - **Action:** Faculty debrief on what worked, what didn't, and what to change
@@ -135,6 +151,7 @@ Dec 2026:     Assessment & Planning for Expansion
 **Objective:** Evaluate pilot success and plan broader rollout
 
 ### December 2026 - January 2027
+
 - **Milestone:** Pilot evaluation complete
 - **Action:** Analyze student learning outcomes (performance on AI-assisted vs. independent assessments)
 - **Action:** Evaluate faculty satisfaction and readiness to continue
@@ -144,6 +161,7 @@ Dec 2026:     Assessment & Planning for Expansion
 - **Deliverable:** Comprehensive pilot evaluation report
 
 ### Planning for Spring/Fall 2027 Expansion
+
 - **Action:** Identify additional courses for next phase based on pilot success
 - **Action:** Refine policies and assignment templates based on lessons learned
 - **Action:** Develop faculty training materials for wider adoption
@@ -152,51 +170,57 @@ Dec 2026:     Assessment & Planning for Expansion
 
 ## Critical Milestones Summary
 
-| Date | Milestone | Responsible Party |
-|------|-----------|-------------------|
-| Jan 2026 | Department approval and faculty leads identified | Department Chair + Faculty Leads |
-| Feb 2026 | Claude licenses secured and accessible | IT Coordinator + Budget Office |
-| Mar 2026 | AI usage policy approved | Faculty Working Group + Honor Code Office |
-| Apr 2026 | Autograder enhancement plan finalized | Technical Lead + Course Instructors |
-| May 2026 | Faculty training workshops completed | Instructional Design + Faculty Leads |
-| Jun 2026 | Course materials redesigned | Course Instructors |
-| Jul 2026 | Enhanced autograders tested and ready | Technical Lead + TAs |
-| Aug 2026 | Fall semester launch | All faculty and TAs |
-| Oct 2026 | Mid-semester assessment complete | Faculty Working Group |
-| Dec 2026 | Pilot evaluation and expansion planning | Department Leadership |
+| Date     | Milestone                                        | Responsible Party                         |
+| -------- | ------------------------------------------------ | ----------------------------------------- |
+| Jan 2026 | Department approval and faculty leads identified | Department Chair + Faculty Leads          |
+| Feb 2026 | Claude licenses secured and accessible           | IT Coordinator + Budget Office            |
+| Mar 2026 | AI usage policy approved                         | Faculty Working Group + Honor Code Office |
+| Apr 2026 | Autograder enhancement plan finalized            | Technical Lead + Course Instructors       |
+| May 2026 | Faculty training workshops completed             | Instructional Design + Faculty Leads      |
+| Jun 2026 | Course materials redesigned                      | Course Instructors                        |
+| Jul 2026 | Enhanced autograders tested and ready            | Technical Lead + TAs                      |
+| Aug 2026 | Fall semester launch                             | All faculty and TAs                       |
+| Oct 2026 | Mid-semester assessment complete                 | Faculty Working Group                     |
+| Dec 2026 | Pilot evaluation and expansion planning          | Department Leadership                     |
 
 ## Key Roles and Responsibilities
 
 **Department Chair / Leadership**
+
 - Approve plan and budget
 - Communicate vision to faculty and students
 - Make decisions on expansion based on pilot results
 
 **Faculty Leads (CS 260, CS 340, CS 329 Instructors)**
+
 - Redesign courses with AI integration
 - Implement AI usage policies in their courses
 - Provide regular feedback on effectiveness
 - Participate in working group
 
 **AI Integration Coordinator** (Recommended: Designate one faculty member)
+
 - Lead faculty workshops
 - Coordinate autograder development
 - Support faculty during implementation
 - Compile assessment data and reports
 
 **Technical Lead / Autograding Specialist**
+
 - Enhance autograding systems
 - Integrate LLM-based assessment
 - Train TAs on new systems
 - Troubleshoot technical issues
 
 **Instructional Design Support**
+
 - Assist faculty with assignment redesign
 - Develop student-facing resources
 - Create assessment rubrics
 - Document best practices
 
 **TAs (Teaching Assistants)**
+
 - Learn enhanced autograding system
 - Support students with Claude usage
 - Monitor for academic integrity concerns
@@ -205,24 +229,28 @@ Dec 2026:     Assessment & Planning for Expansion
 ## Success Metrics
 
 ### Student Outcomes
+
 - **Learning effectiveness:** Students demonstrate understanding on both AI-assisted and independent assessments
 - **Skill development:** Students can explain design decisions and verify AI-generated code
 - **Professional readiness:** Exit surveys show confidence in using AI tools professionally
 - **Satisfaction:** 80%+ of students report positive experience with Claude integration
 
 ### Faculty Outcomes
+
 - **Confidence:** Faculty feel prepared to teach with AI tools
 - **Course quality:** Faculty report ability to cover more advanced material or assign more ambitious projects
 - **Sustainability:** Faculty willing to continue AI integration in future semesters
 - **Workload:** Faculty workload is manageable with enhanced autograding
 
 ### Department Outcomes
+
 - **Academic integrity:** No significant increase in academic integrity violations
 - **Scalability:** Autograding successfully handles 1,500 students with 40 faculty
 - **Leadership:** BYU CS recognized for innovative AI pedagogy
 - **Replicability:** Other departments express interest in adopting approach
 
 ### Measurable Targets
+
 - 200-300 students successfully complete courses with Claude integration
 - Average student satisfaction rating ≥ 4.0/5.0 on AI integration
 - Faculty report ≤10% increase in grading workload despite more sophisticated assessment
@@ -232,40 +260,52 @@ Dec 2026:     Assessment & Planning for Expansion
 ## Risk Mitigation
 
 ### Risk: Students over-rely on AI and don't develop fundamental skills
+
 **Mitigation:**
+
 - Multi-dimensional autograding tests understanding, not just correctness
 - Periodic "no AI" assessments to verify independent capability
 - Progressive scaffolding (limit AI early, increase later in semester)
 
 ### Risk: Autograder development takes longer than expected
+
 **Mitigation:**
+
 - Start autograder work in April with 3-month buffer before launch
 - Prioritize most critical enhancements; defer nice-to-haves if needed
 - Have manual grading backup plan for subset of assignments
 
 ### Risk: Faculty resistance or insufficient training
+
 **Mitigation:**
+
 - Target courses with enthusiastic faculty for pilot (CS 260 instructor eager)
 - Provide stipends and course release time for redesign work
 - Ongoing support through weekly working group meetings
 - Clear documentation and templates to reduce burden
 
 ### Risk: Budget constraints or license access issues
+
 **Mitigation:**
+
 - Budget already allocated (confirmed)
 - Negotiate educational pricing with Anthropic
 - Have free-tier fallback option for students if needed
 - Computer lab access for students without personal subscriptions
 
 ### Risk: Academic integrity incidents spike
+
 **Mitigation:**
+
 - Clear policies from Day 1 integrated with BYU Honor Code
 - Autograders designed to be cheat-resistant (multi-dimensional assessment)
 - Regular faculty check-ins to identify and address concerns early
 - Student education on appropriate vs. inappropriate AI use
 
 ### Risk: University-level policy changes restrict AI use
+
 **Mitigation:**
+
 - Engage with university administration early (March 2026)
 - Position as professional skills development, not just convenience
 - Document pedagogical rationale and alignment with learning outcomes
@@ -276,24 +316,29 @@ Dec 2026:     Assessment & Planning for Expansion
 **Estimated Costs for Fall 2026 Pilot:**
 
 **Claude Licenses**
+
 - 250 students × $30/month (Claude Team) × 4 months = $30,000
 - Alternative: Negotiate annual educational license for lower per-student cost
 
 **Faculty Development**
+
 - Summer stipends for 3 faculty course redesign (3 × $3,000) = $9,000
 - Workshop facilitation and materials = $2,000
 
 **Autograding Development**
+
 - Technical development (contractor or TA hours) = $10,000-15,000
 - Claude API costs for explanation assessment = $1,000-2,000
 
 **Support and Administration**
+
 - AI Integration Coordinator (course release or stipend) = $5,000
 - Instructional design support = $3,000
 
 **Total Estimated Budget: $60,000-66,000 for Fall 2026 pilot**
 
 **Notes:**
+
 - Budget already allocated per initial discussions
 - Costs decrease significantly in subsequent semesters (autograders built, faculty trained)
 - Potential for external funding or educational grants given innovative nature
@@ -307,6 +352,7 @@ Dec 2026:     Assessment & Planning for Expansion
 3. **Initiate license procurement process** with Anthropic and BYU procurement office
 
 4. **Form AI Integration Working Group** with representatives from:
+
    - Faculty leads from target courses
    - Department leadership
    - Instructional design
@@ -320,9 +366,11 @@ Dec 2026:     Assessment & Planning for Expansion
 ## Appendices
 
 ### Appendix A: Sample AI Usage Policy Template
+
 (See Recommendation document Section 2.1 for detailed usage framework)
 
 ### Appendix B: Assignment Redesign Checklist
+
 - [ ] Define which tier (encouraged/allowed/prohibited) applies to this assignment
 - [ ] Specify learning objectives being assessed
 - [ ] Identify what students must demonstrate understanding of independently
@@ -333,6 +381,7 @@ Dec 2026:     Assessment & Planning for Expansion
 - [ ] Prepare sample solutions showing good vs. poor AI collaboration
 
 ### Appendix C: Student Guide Outline: "Working Effectively with Claude"
+
 1. What Claude can help with (and what it can't)
 2. When to use Claude (and when to work independently)
 3. How to prompt effectively
@@ -341,6 +390,7 @@ Dec 2026:     Assessment & Planning for Expansion
 6. Getting help when Claude isn't sufficient
 
 ### Appendix D: Faculty Support Resources
+
 - Weekly working group meetings (Fridays during Fall 2026)
 - Shared assignment repository
 - Slack channel for quick questions
@@ -354,6 +404,7 @@ One of the most powerful applications of AI in education is using Claude itself 
 #### How It Works
 
 **Architecture:**
+
 ```
 Student submits → Autograder system → Calls Claude API → Returns structured assessment → Recorded in gradebook
 ```
@@ -433,6 +484,7 @@ Return your assessment in this JSON format:
 #### What Claude Can Assess
 
 **Design Quality Indicators:**
+
 1. **Justification depth:** Does student explain reasoning, or just describe what they did?
 2. **Tradeoff awareness:** Does student discuss alternatives and why they chose one approach?
 3. **Technical accuracy:** Are design patterns correctly identified and applied?
@@ -440,6 +492,7 @@ Return your assessment in this JSON format:
 5. **Appropriate complexity:** Is solution neither over-engineered nor too simplistic?
 
 **Red Flags for Academic Dishonesty:**
+
 - Generic explanations that could apply to any project
 - Missing specific details from their own implementation
 - Sophisticated terminology without demonstrating understanding
@@ -449,18 +502,21 @@ Return your assessment in this JSON format:
 **Example Assessments:**
 
 **High-quality explanation (9/10):**
+
 > "I chose the Observer pattern because the UI needs to update whenever task status changes. I considered using polling but rejected it due to inefficiency - with 1000+ tasks, constant polling would waste CPU cycles. Observer is more complex to implement but provides real-time updates with minimal overhead. The tradeoff is increased coupling between TaskManager and UI components, which I mitigated by using an event bus interface."
 
-Claude assessment: *Student demonstrates clear understanding of pattern choice, discusses rejected alternatives with technical reasoning, identifies specific tradeoffs, and shows awareness of implementation challenges.*
+Claude assessment: _Student demonstrates clear understanding of pattern choice, discusses rejected alternatives with technical reasoning, identifies specific tradeoffs, and shows awareness of implementation challenges._
 
 **Low-quality explanation (3/10):**
+
 > "I used the Observer pattern because it's good for this type of application. It allows objects to communicate efficiently and makes the code more maintainable. This is a widely-used pattern in software engineering."
 
-Claude assessment: *Generic explanation with no specific justification for this project. Doesn't discuss alternatives or tradeoffs. Could be copied from documentation. Student needs to explain WHY Observer fits their specific requirements.*
+Claude assessment: _Generic explanation with no specific justification for this project. Doesn't discuss alternatives or tradeoffs. Could be copied from documentation. Student needs to explain WHY Observer fits their specific requirements._
 
 #### Implementation Strategies
 
 **Calibration Phase:**
+
 1. Have faculty manually grade 20-30 design documents
 2. Run same documents through Claude API grading
 3. Compare scores and identify discrepancies
@@ -468,6 +524,7 @@ Claude assessment: *Generic explanation with no specific justification for this 
 5. Establish confidence threshold (e.g., if Claude is < 70% confident, flag for manual review)
 
 **Production Use:**
+
 1. All design documents auto-graded by Claude
 2. Scores ≥ 70%: Automated grade recorded, feedback sent to student
 3. Scores 50-70%: Automated grade recorded, flagged for spot-check review
@@ -475,6 +532,7 @@ Claude assessment: *Generic explanation with no specific justification for this 
 5. Random 10% sample manually reviewed for quality control
 
 **Cost Considerations:**
+
 - Claude API cost: ~$0.10-0.30 per design document assessment (depending on document length)
 - For 300 students × 5 design assignments = 1,500 assessments = ~$150-450 per semester
 - Compared to 40 hours of TA time at $15/hour = $600 saved
@@ -495,11 +553,13 @@ These assignment types require genuine understanding and cannot be "solved" by s
 #### Pattern 1: Comparative Implementation with Analysis
 
 **Assignment Structure:**
+
 - Implement the same functionality using TWO different approaches
 - Write analysis comparing approaches with specific metrics
 - Autograder validates both implementations and assesses analysis quality
 
 **Example (CS 340 - Software Design):**
+
 ```
 Assignment: Task Queue System
 
@@ -527,6 +587,7 @@ Autograder checks:
 ```
 
 **Why it's cheat-resistant:**
+
 - Claude can help implement both versions, but student must run benchmarks
 - Analysis must reference student's actual performance data
 - Generic AI-generated analysis won't match their specific results
@@ -537,11 +598,13 @@ Autograder checks:
 #### Pattern 2: Code Archaeology and Refactoring
 
 **Assignment Structure:**
+
 - Provide students with intentionally flawed or legacy code
 - Students must identify issues, explain problems, and improve code
 - Tests understanding of code review and design principles
 
 **Example (CS 340 - Software Design):**
+
 ```
 Assignment: Legacy E-commerce System Refactoring
 
@@ -574,6 +637,7 @@ Autograder checks:
 ```
 
 **Why it's cheat-resistant:**
+
 - Claude can help refactor, but student must identify and explain problems first
 - Requires reading and understanding existing code, not just generating new code
 - Explanation must reference specific lines from the provided codebase
@@ -584,10 +648,12 @@ Autograder checks:
 #### Pattern 3: Constrained Implementation
 
 **Assignment Structure:**
+
 - Implement solution with specific constraints that test understanding
 - Constraints chosen to prevent simple AI delegation
 
 **Example (CS 260 - Web Programming):**
+
 ```
 Assignment: Build a Single Page App WITHOUT Using Frameworks
 
@@ -621,6 +687,7 @@ Autograder checks:
 ```
 
 **Why it's cheat-resistant:**
+
 - Claude can help implement, but constraints force deep engagement with fundamentals
 - Student must understand what frameworks do "under the hood"
 - Explanation required to articulate why patterns are necessary
@@ -631,11 +698,13 @@ Autograder checks:
 #### Pattern 4: Test-First Development with Quality Requirements
 
 **Assignment Structure:**
+
 - Require comprehensive tests BEFORE implementation
 - Grade test quality, not just code correctness
 - Tests reveal understanding of requirements and edge cases
 
 **Example (CS 329 - QA and DevOps):**
+
 ```
 Assignment: API Testing and Quality Assurance
 
@@ -664,6 +733,7 @@ Autograder checks:
 ```
 
 **Why it's cheat-resistant:**
+
 - Good tests require understanding requirements deeply
 - Claude can help write tests, but student must decide WHAT to test
 - Test quality reveals understanding of edge cases and failure modes
@@ -674,10 +744,12 @@ Autograder checks:
 #### Pattern 5: Design-First with Peer Review
 
 **Assignment Structure:**
+
 - Multi-stage assignment with design approval before implementation
 - Peer review component requires critical evaluation skills
 
 **Example (CS 340 - Software Design):**
+
 ```
 Assignment: Multi-Stage Project with Design Gates
 
@@ -708,6 +780,7 @@ Autograder checks:
 ```
 
 **Why it's cheat-resistant:**
+
 - Design must be defended before implementation
 - Cannot just generate and submit code
 - Peer review requires critical thinking about others' work
@@ -718,10 +791,12 @@ Autograder checks:
 #### Pattern 6: Debugging and Root Cause Analysis
 
 **Assignment Structure:**
+
 - Provide buggy code and failing tests
 - Students must diagnose, explain, and fix
 
 **Example (CS 260 - Web Programming):**
+
 ```
 Assignment: Debug a Broken Web Application
 
@@ -752,6 +827,7 @@ Autograder checks:
 ```
 
 **Why it's cheat-resistant:**
+
 - Requires reading and understanding existing code
 - Claude can suggest fixes, but student must explain diagnosis process
 - Root cause analysis reveals debugging thought process
@@ -762,11 +838,13 @@ Autograder checks:
 #### Pattern 7: Performance Optimization with Profiling
 
 **Assignment Structure:**
+
 - Provide inefficient but correct code
 - Require optimization with measurable improvement
 - Must justify optimizations with profiling data
 
 **Example (CS 340 - Software Design):**
+
 ```
 Assignment: Optimize a Slow System
 
@@ -797,6 +875,7 @@ Autograder checks:
 ```
 
 **Why it's cheat-resistant:**
+
 - Must run profiling tools and collect actual data
 - Explanation must reference student's specific profiling results
 - Performance improvement must be measured, not claimed
@@ -826,6 +905,7 @@ Autograder checks:
 ## Why Faculty Confidence Matters
 
 Faculty who are confident Claude users will:
+
 - Design better AI-appropriate assignments
 - Guide students more effectively when they get stuck
 - Recognize when students are over-relying on AI vs. using it appropriately
@@ -840,11 +920,14 @@ Faculty who are confident Claude users will:
 ## Faculty Learning Path: From Novice to Confident User
 
 ### Phase 1: Personal Exploration (Week 1-2)
+
 **Goal:** Get comfortable with basic Claude interactions
 
 **Activities:**
+
 1. **Sign up and explore** - Create Claude.ai account, try free tier
 2. **Daily practice** - Use Claude for 15 minutes/day on personal tasks:
+
    - "Explain this research paper abstract in simple terms"
    - "Help me debug this Python script I wrote for data analysis"
    - "Review my draft email to the department for clarity"
@@ -861,14 +944,17 @@ Faculty who are confident Claude users will:
 ---
 
 ### Phase 2: Teaching-Related Tasks (Week 3-4)
+
 **Goal:** Use Claude for actual faculty work to see benefits firsthand
 
 **Suggested Faculty Projects:**
 
 #### Project 1: Assignment Redesign with Claude
+
 **Task:** Take an existing assignment and discuss with Claude how to make it AI-appropriate.
 
 **Process:**
+
 ```
 Faculty → Claude: "I have an assignment where students implement a binary search
 tree in Java. How can I redesign this for an environment where students can use
@@ -884,6 +970,7 @@ design specific constraints that would test understanding?"
 ```
 
 **What faculty learn:**
+
 - How to have design conversations with Claude
 - Claude can generate ideas but faculty makes final decisions
 - Iterative prompting yields better results
@@ -894,9 +981,11 @@ design specific constraints that would test understanding?"
 ---
 
 #### Project 2: Generate Test Cases with Claude
+
 **Task:** Use Claude to generate comprehensive test cases for an assignment autograder.
 
 **Process:**
+
 ```
 Faculty → Claude: "I need to create test cases for a student assignment where
 they implement a REST API for a library system. The API should handle books,
@@ -915,6 +1004,7 @@ Faculty: [Reviews, modifies, and adds to autograder]
 ```
 
 **What faculty learn:**
+
 - Claude can accelerate tedious tasks (test case generation)
 - Still need to review and verify Claude's output
 - Specific prompts yield better results than generic ones
@@ -925,9 +1015,11 @@ Faculty: [Reviews, modifies, and adds to autograder]
 ---
 
 #### Project 3: Create Rubric with Claude
+
 **Task:** Design a grading rubric for a design document or project reflection.
 
 **Process:**
+
 ```
 Faculty → Claude: "I need a rubric to grade student design documents for a
 web application project. Students should explain their architecture, database
@@ -944,6 +1036,7 @@ tradeoff analysis more. Can you revise?"
 ```
 
 **What faculty learn:**
+
 - Claude can help structure rubrics
 - Faculty expertise guides the criteria
 - Rubrics can assess understanding vs. correctness
@@ -954,9 +1047,11 @@ tradeoff analysis more. Can you revise?"
 ---
 
 #### Project 4: Build Sample Solutions
+
 **Task:** Use Claude to help create reference implementations for assignments.
 
 **Process:**
+
 ```
 Faculty → Claude: "I'm creating a sample solution for a student assignment:
 implement a task queue using both an array-based circular buffer and a linked
@@ -975,6 +1070,7 @@ Faculty: [Continues refining until it matches expected quality]
 ```
 
 **What faculty learn:**
+
 - Claude can generate working code quickly
 - Faculty must verify correctness (doesn't replace testing)
 - Can iterate to improve code quality
@@ -985,9 +1081,11 @@ Faculty: [Continues refining until it matches expected quality]
 ---
 
 #### Project 5: Design Lecture Examples
+
 **Task:** Generate code examples or explanations for lecture topics.
 
 **Process:**
+
 ```
 Faculty → Claude: "I'm teaching about design patterns next week. I need a
 concrete example of the Observer pattern that students can relate to. Preferably
@@ -1004,6 +1102,7 @@ Claude → Faculty: [Generates commented code example]
 ```
 
 **What faculty learn:**
+
 - Claude can generate creative examples
 - Can tailor examples to specific learning objectives
 - Code explanations can supplement lectures
@@ -1014,11 +1113,13 @@ Claude → Faculty: [Generates commented code example]
 ---
 
 ### Phase 3: Collaborative Learning (Week 5-6)
+
 **Goal:** Faculty learn from each other's experiences
 
 **Activities:**
 
 #### Faculty Sharing Sessions
+
 - **Weekly roundtable:** Faculty share:
   - "This week I used Claude to..."
   - "Something that worked well..."
@@ -1026,11 +1127,13 @@ Claude → Faculty: [Generates commented code example]
   - "A limitation I discovered..."
 
 #### Peer Observation
+
 - Faculty observe each other using Claude for tasks
 - Share prompting strategies
 - Discuss different approaches to the same problem
 
 #### Shared Prompt Library
+
 - Create department repository of effective prompts:
   - Assignment redesign prompts
   - Test case generation prompts
@@ -1044,16 +1147,19 @@ Claude → Faculty: [Generates commented code example]
 ## Best Practices for Learning Claude
 
 ### 1. Start with Your Own Work
+
 **Don't:** Start by designing student assignments
 **Do:** Use Claude for your own tasks first (grading, research, coding)
 **Why:** Lower stakes, immediate feedback on what works
 
 ### 2. Iterate Your Prompts
+
 **Don't:** Expect perfect results from first prompt
 **Do:** Treat conversation as iterative refinement
 **Why:** Claude gets better with context and clarification
 
 **Example progression:**
+
 ```
 Prompt 1: "Help me design a database"
 → Too vague, Claude asks clarifying questions
@@ -1069,35 +1175,43 @@ to have hundreds of reviews."
 ```
 
 ### 3. Verify, Don't Trust Blindly
+
 **Don't:** Copy-paste Claude's code without understanding
 **Do:** Test, verify, and understand before using
 **Why:** Claude makes mistakes; you're responsible for correctness
 
 **Practice:**
+
 - Read all generated code
 - Test with edge cases
 - Ask Claude to explain parts you don't understand
 - Modify to fit your exact needs
 
 ### 4. Use Claude for Brainstorming, Not Final Decisions
+
 **Don't:** Accept Claude's first suggestion as the answer
 **Do:** Use Claude to generate options, then apply your expertise
 **Why:** You understand context Claude doesn't (student level, course goals, time constraints)
 
 ### 5. Be Specific
+
 **Don't:** "Make this code better"
 **Do:** "Refactor this code to use the Strategy pattern, add comments explaining the pattern, and handle the case where no strategy is provided"
 **Why:** Specific prompts yield useful results
 
 ### 6. Ask Claude to Explain Its Reasoning
+
 **Helpful prompts:**
+
 - "Why did you choose this approach?"
 - "What are the tradeoffs of this solution?"
 - "What alternative approaches exist?"
 - "Explain this code line by line"
 
 ### 7. Use Claude as a Thinking Partner
+
 **Effective patterns:**
+
 - "I'm considering two approaches: A and B. Help me analyze the tradeoffs"
 - "Here's my current design. What potential issues do you see?"
 - "I'm stuck on X. Can you suggest approaches I might not have considered?"
@@ -1109,18 +1223,21 @@ to have hundreds of reviews."
 ### 1. Anthropic Official Resources
 
 **Claude.ai Quick Start Guide**
+
 - Interactive tutorial when you first sign up
 - Covers basic prompting, conversation features, file uploads
 - ~15 minutes
 - **Link:** Available at claude.ai after sign-up
 
 **Anthropic Documentation**
+
 - Comprehensive guide to Claude's capabilities
 - Best practices for prompting
 - API documentation (for autograding use)
 - **Link:** docs.anthropic.com
 
 **Prompt Engineering Guide**
+
 - Techniques for effective prompting
 - Examples for different tasks
 - Common pitfalls to avoid
@@ -1133,17 +1250,20 @@ to have hundreds of reviews."
 ### 2. Self-Paced Learning Activities
 
 **Week 1-2: Foundations**
+
 - Sign up for Claude.ai (free tier sufficient for learning)
 - Complete built-in tutorial
 - Read: "Prompt Engineering Guide" (30 min)
 - Practice: Use Claude for 3 personal tasks daily
 
 **Week 3-4: Teaching Applications**
+
 - Complete one faculty project (from list above)
 - Read: "Claude for Education" use cases
 - Practice: Redesign one existing assignment with Claude's help
 
 **Week 5-6: Advanced Techniques**
+
 - Experiment with longer conversations (building context)
 - Try file uploads (give Claude your syllabus to analyze)
 - Practice: Create test cases or rubrics with Claude
@@ -1154,9 +1274,11 @@ to have hundreds of reviews."
 **Proposed Workshop Series (May 2026)**
 
 #### Workshop 1: "Getting Started with Claude" (2 hours)
+
 **Format:** Hands-on computer lab session
 
 **Agenda:**
+
 - 0:00-0:15: Introduction and account setup
 - 0:15-0:45: Guided exercises:
   - Basic conversation
@@ -1178,9 +1300,11 @@ to have hundreds of reviews."
 ---
 
 #### Workshop 2: "Designing AI-Era Assignments" (2 hours)
+
 **Format:** Design studio
 
 **Agenda:**
+
 - 0:00-0:20: Presentation on assignment design principles
   - Multi-dimensional assessment
   - Cheat-resistant patterns
@@ -1202,9 +1326,11 @@ to have hundreds of reviews."
 ---
 
 #### Workshop 3: "Autograding with Claude API" (2 hours)
+
 **Format:** Technical training
 
 **Agenda:**
+
 - 0:00-0:30: Introduction to Claude API
   - API basics and authentication
   - Differences from chat interface
@@ -1229,9 +1355,11 @@ to have hundreds of reviews."
 ---
 
 #### Workshop 4: "Academic Integrity in the AI Era" (1.5 hours)
+
 **Format:** Discussion and policy workshop
 
 **Agenda:**
+
 - 0:00-0:20: Framing the issue
   - Traditional academic integrity vs. AI era
   - BYU Honor Code considerations
@@ -1253,17 +1381,20 @@ to have hundreds of reviews."
 ### 4. Ongoing Support Structures
 
 **Weekly Office Hours (Fall 2026)**
+
 - AI Integration Coordinator holds weekly office hours
 - Faculty drop in with questions, challenges, or to share successes
 - Troubleshoot issues together
 
 **Slack/Teams Channel**
+
 - Async communication for quick questions
 - Share prompts that worked well
 - Discuss student situations
 - Celebrate successes
 
 **Monthly Faculty Learning Community**
+
 - 1-hour lunch meeting
 - Share what's working in classes
 - Discuss challenges
@@ -1278,16 +1409,19 @@ to have hundreds of reviews."
 ### Quick Wins (First 2 Weeks)
 
 **Win 1: "Claude helped me redesign an assignment in 30 minutes"**
+
 - Old assignment: "Implement binary search tree"
 - New assignment: "Implement BST and AVL tree, benchmark both, analyze tradeoffs"
 - Claude helped: Generate the AVL tree reference code, suggest benchmark criteria, draft rubric
 
 **Win 2: "Claude generated 20 test cases I hadn't thought of"**
+
 - Testing an API assignment
 - Claude suggested edge cases, security tests, performance tests
 - Faculty refined and added to autograder
 
 **Win 3: "Claude helped me explain a complex topic better"**
+
 - Topic: Database normalization
 - Claude generated 3 different real-world examples
 - Faculty picked the best one for lecture
@@ -1295,11 +1429,13 @@ to have hundreds of reviews."
 ### Medium-Term Wins (Month 1-2)
 
 **Win 4: "Students are having better design conversations"**
+
 - Students use Claude to explore architecture options
 - Come to office hours with more sophisticated questions
 - Design documents show deeper thinking
 
 **Win 5: "Autograding is actually assessing understanding"**
+
 - Claude API grades design documents
 - Identifies when explanations are superficial
 - Provides specific feedback to students
@@ -1308,11 +1444,13 @@ to have hundreds of reviews."
 ### Long-Term Wins (Semester End)
 
 **Win 6: "Students are more prepared for industry"**
+
 - Exit surveys show confidence in AI-assisted development
 - Students can articulate when to use AI vs. work independently
 - Projects are more sophisticated than previous years
 
 **Win 7: "I'm teaching more advanced content"**
+
 - AI handles boilerplate, students focus on architecture
 - Covered design patterns that usually get skipped
 - Student projects demonstrate deeper understanding
@@ -1322,9 +1460,11 @@ to have hundreds of reviews."
 ## Addressing Faculty Concerns
 
 ### "I'm not technical enough to use Claude"
+
 **Response:** Claude is a conversation tool, not a programming tool. If you can describe what you need in English, Claude can help. Faculty don't need to be Claude experts - start with simple tasks and build from there.
 
 **Confidence builder:** Have faculty use Claude for non-technical tasks first:
+
 - "Summarize this research paper"
 - "Help me write an email to students about late policy"
 - "Suggest discussion questions for this reading"
@@ -1332,22 +1472,27 @@ to have hundreds of reviews."
 Once comfortable with conversation, move to technical tasks.
 
 ### "What if students know Claude better than I do?"
+
 **Response:** Students probably will know different Claude techniques - that's fine! Faculty expertise is in CS concepts, pedagogy, and assessment design. Claude is just a tool.
 
 **Reframe:** Faculty don't need to be the best Claude users - they need to guide students in using Claude appropriately for learning.
 
 ### "I'm worried I'll look foolish if Claude gives wrong answers"
+
 **Response:** Claude makes mistakes - that's a teaching opportunity! Model critical thinking by verifying Claude's outputs.
 
 **Practice:** Intentionally show students examples where Claude gets things wrong, demonstrate how to verify and correct.
 
 ### "This feels like cheating"
+
 **Response:** Professionals use AI tools. Teaching students to use them effectively is preparing them for reality, not enabling cheating.
 
 **Mindset shift:** We're teaching "programming with AI assistance" - a different but legitimate skill from "programming without any help."
 
 ### "I don't have time to learn a new tool"
+
 **Response:** Time investment upfront saves time later. Claude can:
+
 - Generate test cases in minutes (vs. hours manually)
 - Draft rubrics (vs. starting from scratch)
 - Create example code (vs. writing every example yourself)
@@ -1359,24 +1504,28 @@ Once comfortable with conversation, move to technical tasks.
 ## Measuring Faculty Confidence Growth
 
 **Pre-Workshop Survey:**
+
 - How comfortable are you using AI tools? (1-5)
 - Have you used Claude before? (Y/N)
 - How confident are you in teaching with AI tools? (1-5)
 - What concerns do you have?
 
 **Mid-Semester Check:**
+
 - How often do you use Claude for course prep? (Daily/Weekly/Monthly/Never)
 - Name 2-3 ways Claude has helped you
 - What challenges have you encountered?
 - Confidence level now? (1-5)
 
 **End-of-Semester Reflection:**
+
 - Would you continue using Claude next semester? (Y/N)
 - What was most valuable about Claude?
 - What would you recommend to other faculty?
 - Confidence level? (1-5)
 
 **Target Metrics:**
+
 - 80%+ of faculty report increased confidence by semester end
 - 90%+ plan to continue using Claude
 - Average confidence score increases from ~2.5 to ~4.0
@@ -1386,6 +1535,7 @@ Once comfortable with conversation, move to technical tasks.
 ## Success Indicators
 
 **Faculty are confident when they:**
+
 1. Use Claude regularly for course preparation (weekly or more)
 2. Can articulate Claude's strengths and limitations
 3. Troubleshoot student issues involving Claude
